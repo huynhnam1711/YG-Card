@@ -1,14 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap");
 
 
-$red:#e60000;
-$black:#222;
-$white:#fff;
-$light-color:#666;
-$light-bg:#eee;
-$white-bg:#ccc;
-$write:#111;
-$modal:rgba(0, 0, 0, 0.3);
+:root{
+    --black:#222;
+    --white:#fff;
+    --light-color:#666;
+    --light-bg:#eee;
+    --white-bg:#ccc;
+    --write:#111;
+    --modal:rgba(0, 0, 0, 0.3);
+    --ss:#2c2c54;
+    --ms:#3c16e6;
+}
 
 *{
     font-family: 'Poppins', sans-serif;
@@ -20,6 +23,8 @@ $modal:rgba(0, 0, 0, 0.3);
     outline: none;
     box-sizing: border-box;
     transition: all .2s linear;
+    overflow: hidden;
+    // overflow-y: scroll;
 }
 
 html{
@@ -33,7 +38,7 @@ html{
     }
 
     &::-webkit-scrollbar-thumb{
-        background: #2c2c54;
+        background: var(--ss);
     }
     
     &::-webkit-scrollbar-track{
@@ -46,20 +51,23 @@ section{
 }
 
 body{
-    background: $white;
+    
+    background: url(../img/bg-card.jpg) no-repeat;
+    background-position: center;
+    background-position: top;
 }
 
 body.active{
-    $black:#fff;
-    $white:#333;
-    $light-color:#aaa;
-    $light-bg:#222;
-    $write:#fff;
-    $modal:rgba(255, 255, 255, 0.6)
+    --black:#fff;
+    --white:#111;
+    --light-color:#aaa;
+    --light-bg:#222;
+    --write:#fff;
+    --modal:rgba(255, 255, 255, 0.6);
+    --ms: #fff;
 }
 
 .header {
-
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -82,12 +90,13 @@ body.active{
             a{
                 font-size: 2rem;
                 font-weight: 900;
-                color: #333;
+                color: #fff;
                 padding-left: 1rem;
             }
 
             p{
                 font-size: 1.2rem;
+                color: #fff;
             }
         }
     }
@@ -96,71 +105,90 @@ body.active{
             
         div{
             font-size: 2rem;
+            color: #fff;
             cursor: pointer;
         }
+    }
+
+    
+/* animation xoay icons */
+        #search-btn.fa-times{
+        transform: rotate(90deg);
+    }   
+
+        #theme-btn.fa-sun{
+        transform: rotate(90deg);
     }
 }
 
 .details-products{
 
-    .btn{
-        display: block;
-        cursor: pointer;
 
-        .QR-code{
-            display: flex;
-            align-items: center;
-    
+    .btn{
+        width: 100%;
+        padding: 1.3rem 0;
+        display: flex;
+        background: var(--white);
+        align-items: center;
+        border-radius: 5rem;
+
+        .icon{
+            font-size: 2rem;
+            color: var(--black);
+
             i{
-                font-size: 2rem;
-                padding: 2rem 0;
+                padding-left: 2rem;
             }
+        }
+
+        .content{
+            padding-left: 1.5rem;
+            font-size: 1.4rem;
+            line-height: 1.5;
+            color: var(--black);
+        }
+
+        &:hover{
+            cursor: pointer;
+        }
+    }
+
+    .box{
+        padding-top: 2rem;
+
+        .facebook,
+        .messenger,
+        .zalo,
+        .email,
+        .phone{
+            width: 100%;
+            padding: 1.3rem 0;
+            display: flex;
+            background: var(--white);
+            align-items: center;
+            border-radius: 5rem;
+
+            .icon{
+                font-size: 2rem;
+                color: var(--ms);
     
-            .content{
-    
-                p{
-                    text-align: center;
+                i{
                     padding-left: 2rem;
-                    font-size: 1.5rem;
-                    text-transform: none;
                 }
             }
-        }
-    }
 
-    .facebook{
-        display: flex;
-        align-items: center;
-
-        i{
-            font-size: 2rem;
-            padding: 2rem 0;
+            .content{
+                padding-left: 1.5rem;
+                font-size: 1.4rem;
+                line-height: 1.5;
+                color: var(--black);
+            }
         }
 
-        p{
-            text-align: center;
-            padding-left: 2rem;
-            font-size: 1.5rem;
-            text-transform: none;
-            color: $black;
+        &:hover{
+            cursor: pointer;
         }
-    }
-    .messenger{
-        display: flex;
-        align-items: center;
-
-        i{
-            font-size: 2rem;
-            padding: 2rem 0;
-        }
-
-        p{
-            text-align: center;
-            padding-left: 2rem;
-            font-size: 1.5rem;
-            text-transform: none;
-            color: $black;
-        }
+        
     }
 }
 
@@ -170,7 +198,7 @@ body.active{
     left: 0;
     right: 0;
     bottom: 0;
-    background: $modal;
+    background: var(--modal);
     visibility: hidden;
     opacity: 0;
 
@@ -198,7 +226,7 @@ body.active{
             top: 1.5rem;
             right: 1.8rem;
             font-size: 2rem;
-            color: $white-bg;
+            color: var(--white-bg);
         }
 
         .box{
@@ -211,14 +239,12 @@ body.active{
             h3{
                 margin-top: .5rem;
                 font-size: 2rem;
-                color: $white;
+                color: var(--white);
             }
 
             .image-qr{
 
                 img{     
-                max-height: 100%;
-                max-width: 100%;
                     margin-top: 1rem;
                 }
             }
@@ -229,7 +255,7 @@ body.active{
                 left: 5%;
                 right: 5%;
                 bottom: 3%;
-                background: $white;
+                background: #fff;
                 border-radius: 1rem;
                 text-align: left;
 

@@ -1,4 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap");
+:root {
+  --black:#222;
+  --white:#fff;
+  --light-color:#666;
+  --light-bg:#eee;
+  --white-bg:#ccc;
+  --write:#111;
+  --modal:rgba(0, 0, 0, 0.3);
+  --ss:#2c2c54;
+  --ms:#3c16e6;
+}
+
 * {
   font-family: "Poppins", sans-serif;
   padding: 0;
@@ -9,6 +21,7 @@
   outline: none;
   box-sizing: border-box;
   transition: all 0.2s linear;
+  overflow: hidden;
 }
 
 html {
@@ -21,7 +34,7 @@ html::-webkit-scrollbar {
   width: 1rem;
 }
 html::-webkit-scrollbar-thumb {
-  background: #2c2c54;
+  background: var(--ss);
 }
 html::-webkit-scrollbar-track {
   background: transparent;
@@ -32,13 +45,26 @@ section {
 }
 
 body {
-  background: #fff;
+  background: url(../img/bg-card.jpg) no-repeat;
+  background-position: center;
+  background-position: top;
+}
+
+body.active {
+  --black:#fff;
+  --white:#111;
+  --light-color:#aaa;
+  --light-bg:#222;
+  --write:#fff;
+  --modal:rgba(255, 255, 255, 0.6);
+  --ms: #fff;
 }
 
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  /* animation xoay icons */
 }
 .header .info {
   display: flex;
@@ -55,64 +81,91 @@ body {
 .header .info .navbar a {
   font-size: 2rem;
   font-weight: 900;
-  color: #333;
+  color: #fff;
   padding-left: 1rem;
 }
 .header .info .navbar p {
   font-size: 1.2rem;
+  color: #fff;
 }
 .header .icon div {
   font-size: 2rem;
+  color: #fff;
   cursor: pointer;
+}
+.header #search-btn.fa-times {
+  transform: rotate(90deg);
+}
+.header #theme-btn.fa-sun {
+  transform: rotate(90deg);
 }
 
 .details-products .btn {
-  display: block;
+  width: 100%;
+  padding: 1.3rem 0;
+  display: flex;
+  background: var(--white);
+  align-items: center;
+  border-radius: 5rem;
+}
+.details-products .btn .icon {
+  font-size: 2rem;
+  color: var(--black);
+}
+.details-products .btn .icon i {
+  padding-left: 2rem;
+}
+.details-products .btn .content {
+  padding-left: 1.5rem;
+  font-size: 1.4rem;
+  line-height: 1.5;
+  color: var(--black);
+}
+.details-products .btn:hover {
   cursor: pointer;
 }
-.details-products .btn .QR-code {
+.details-products .box {
+  padding-top: 2rem;
+}
+.details-products .box .facebook,
+.details-products .box .messenger,
+.details-products .box .zalo,
+.details-products .box .email,
+.details-products .box .phone {
+  width: 100%;
+  padding: 1.3rem 0;
   display: flex;
+  background: var(--white);
   align-items: center;
+  border-radius: 5rem;
 }
-.details-products .btn .QR-code i {
+.details-products .box .facebook .icon,
+.details-products .box .messenger .icon,
+.details-products .box .zalo .icon,
+.details-products .box .email .icon,
+.details-products .box .phone .icon {
   font-size: 2rem;
-  padding: 2rem 0;
+  color: var(--ms);
 }
-.details-products .btn .QR-code .content p {
-  text-align: center;
+.details-products .box .facebook .icon i,
+.details-products .box .messenger .icon i,
+.details-products .box .zalo .icon i,
+.details-products .box .email .icon i,
+.details-products .box .phone .icon i {
   padding-left: 2rem;
-  font-size: 1.5rem;
-  text-transform: none;
 }
-.details-products .facebook {
-  display: flex;
-  align-items: center;
+.details-products .box .facebook .content,
+.details-products .box .messenger .content,
+.details-products .box .zalo .content,
+.details-products .box .email .content,
+.details-products .box .phone .content {
+  padding-left: 1.5rem;
+  font-size: 1.4rem;
+  line-height: 1.5;
+  color: var(--black);
 }
-.details-products .facebook i {
-  font-size: 2rem;
-  padding: 2rem 0;
-}
-.details-products .facebook p {
-  text-align: center;
-  padding-left: 2rem;
-  font-size: 1.5rem;
-  text-transform: none;
-  color: #222;
-}
-.details-products .messenger {
-  display: flex;
-  align-items: center;
-}
-.details-products .messenger i {
-  font-size: 2rem;
-  padding: 2rem 0;
-}
-.details-products .messenger p {
-  text-align: center;
-  padding-left: 2rem;
-  font-size: 1.5rem;
-  text-transform: none;
-  color: #222;
+.details-products .box:hover {
+  cursor: pointer;
 }
 
 .model {
@@ -121,7 +174,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.3);
+  background: var(--modal);
   visibility: hidden;
   opacity: 0;
 }
@@ -148,7 +201,7 @@ body {
   top: 1.5rem;
   right: 1.8rem;
   font-size: 2rem;
-  color: #ccc;
+  color: var(--white-bg);
 }
 .model .box-container .box img {
   margin-top: 2.5rem;
@@ -157,11 +210,9 @@ body {
 .model .box-container .box h3 {
   margin-top: 0.5rem;
   font-size: 2rem;
-  color: #fff;
+  color: var(--white);
 }
 .model .box-container .box .image-qr img {
-  max-height: 100%;
-  max-width: 100%;
   margin-top: 1rem;
 }
 .model .box-container .box .content {

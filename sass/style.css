@@ -1,4 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap");
+:root {
+  --black:#222;
+  --white:#fff;
+  --light-color:#666;
+  --light-bg:#eee;
+  --white-bg:#ccc;
+  --write:#111;
+  --modal:rgba(0, 0, 0, 0.3);
+  --ss:#2c2c54;
+}
+
 * {
   font-family: 'Poppins', sans-serif;
   padding: 0;
@@ -25,7 +36,7 @@ html::-webkit-scrollbar {
 }
 
 html::-webkit-scrollbar-thumb {
-  background: #2c2c54;
+  background: var(--ss);
 }
 
 html::-webkit-scrollbar-track {
@@ -37,7 +48,18 @@ section {
 }
 
 body {
-  background: #fff;
+  background: var(--white);
+}
+
+body.active {
+  --black:#fff;
+  --white:#333;
+  --light-color:#aaa;
+  --light-bg:#222;
+  --write:#fff;
+  --modal:rgba(255, 255, 255, 0.6)
+    
+;
 }
 
 .header {
@@ -50,6 +72,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  /* animation xoay icons */
 }
 
 .header .info {
@@ -74,17 +97,34 @@ body {
 .header .info .navbar a {
   font-size: 2rem;
   font-weight: 900;
-  color: #333;
+  color: var(--black);
   padding-left: 1rem;
 }
 
 .header .info .navbar p {
   font-size: 1.2rem;
+  color: var(--black);
 }
 
 .header .icon div {
   font-size: 2rem;
+  color: var(--black);
   cursor: pointer;
+}
+
+.header #search-btn.fa-times {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.header #theme-btn.fa-sun {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.details-products .content p {
+  color: var(--black);
+  font-weight: bold;
 }
 
 .details-products .btn {
@@ -103,6 +143,7 @@ body {
 
 .details-products .btn .QR-code i {
   font-size: 2rem;
+  color: var(--black);
   padding: 2rem 0;
 }
 
@@ -123,16 +164,17 @@ body {
 }
 
 .details-products .facebook i {
-  font-size: 2rem;
-  padding: 2rem 0;
+  font-size: 2.5rem;
+  color: #3c16e6;
+  outline: none;
 }
 
-.details-products .facebook p {
+.details-products .facebook .content p {
+  padding: 2rem 0;
   text-align: center;
   padding-left: 2rem;
   font-size: 1.5rem;
   text-transform: none;
-  color: #222;
 }
 
 .details-products .messenger {
@@ -149,12 +191,11 @@ body {
   padding: 2rem 0;
 }
 
-.details-products .messenger p {
+.details-products .messenger .content p {
   text-align: center;
   padding-left: 2rem;
   font-size: 1.5rem;
   text-transform: none;
-  color: #222;
 }
 
 .model {
@@ -163,7 +204,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.3);
+  background: var(--modal);
   visibility: hidden;
   opacity: 0;
 }
@@ -195,7 +236,7 @@ body {
   top: 1.5rem;
   right: 1.8rem;
   font-size: 2rem;
-  color: #ccc;
+  color: var(--white-bg);
 }
 
 .model .box-container .box img {
@@ -206,12 +247,10 @@ body {
 .model .box-container .box h3 {
   margin-top: .5rem;
   font-size: 2rem;
-  color: #fff;
+  color: var(--white);
 }
 
 .model .box-container .box .image-qr img {
-  max-height: 100%;
-  max-width: 100%;
   margin-top: 1rem;
 }
 
@@ -221,7 +260,7 @@ body {
   left: 5%;
   right: 5%;
   bottom: 3%;
-  background: #fff;
+  background: var(--white);
   border-radius: 1rem;
   text-align: left;
 }
