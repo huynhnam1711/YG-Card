@@ -52,13 +52,13 @@ section{
 
 body{
     
-    background: url(../img/bg-card5.jpg) no-repeat;
+    background: url(../img/bg-card1.jpg) repeat;
     background-position: center;
     background-position: top;
 }
 
 body.active{
-    background: url(../img/bt-card2.jpg) no-repeat;
+    background: url(../img/bt-card1.jpg) no-repeat;
     --black:#fff;
     --white:#111;
     --light-color:#aaa;
