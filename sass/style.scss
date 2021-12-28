@@ -1,0 +1,257 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap");
+
+
+$red:#e60000;
+$black:#222;
+$white:#fff;
+$light-color:#666;
+$light-bg:#eee;
+$white-bg:#ccc;
+$write:#111;
+$modal:rgba(0, 0, 0, 0.3);
+
+*{
+    font-family: 'Poppins', sans-serif;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    text-transform: capitalize;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    transition: all .2s linear;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 7rem;
+
+    &::-webkit-scrollbar{
+        width: 1rem;
+    }
+
+    &::-webkit-scrollbar-thumb{
+        background: #2c2c54;
+    }
+    
+    &::-webkit-scrollbar-track{
+        background: transparent;
+    }
+}
+
+section{
+    padding: 3rem 4%; 
+}
+
+body{
+    background: $white;
+}
+
+body.active{
+    $black:#fff;
+    $white:#333;
+    $light-color:#aaa;
+    $light-bg:#222;
+    $write:#fff;
+    $modal:rgba(255, 255, 255, 0.6)
+}
+
+.header {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    .info{
+        display: flex;
+        align-items: center;
+
+        .logo{
+
+            img{
+                width: 7.5rem;
+                height: 8rem;
+                border-radius: 5rem;
+            }
+        }
+
+        .navbar{
+            text-align: center;
+            a{
+                font-size: 2rem;
+                font-weight: 900;
+                color: #333;
+                padding-left: 1rem;
+            }
+
+            p{
+                font-size: 1.2rem;
+            }
+        }
+    }
+
+    .icon{
+            
+        div{
+            font-size: 2rem;
+            cursor: pointer;
+        }
+    }
+}
+
+.details-products{
+
+    .QR-code{
+        display: flex;
+        align-items: center;
+
+        i{
+            font-size: 2rem;
+            padding: 2rem 0;
+        }
+
+        .content{
+
+            p{
+                text-align: center;
+                padding-left: 2rem;
+                font-size: 1.5rem;
+                text-transform: none;
+            }
+        }
+    }
+
+    .facebook{
+        display: flex;
+        align-items: center;
+
+        i{
+            font-size: 2rem;
+            padding: 2rem 0;
+        }
+
+        p{
+            text-align: center;
+            padding-left: 2rem;
+            font-size: 1.5rem;
+            text-transform: none;
+            color: $black;
+        }
+    }
+    .messenger{
+        display: flex;
+        align-items: center;
+
+        i{
+            font-size: 2rem;
+            padding: 2rem 0;
+        }
+
+        p{
+            text-align: center;
+            padding-left: 2rem;
+            font-size: 1.5rem;
+            text-transform: none;
+            color: $black;
+        }
+    }
+}
+
+.model{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: $modal;
+    visibility: visible;
+    opacity: 1;
+
+    &.active{
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .box-container{
+        position: absolute;
+        top: 5%;
+        left: 5%;
+        right: 5%;
+        bottom: 5%;      
+        width: 90%;
+        height: 90%;
+        background: #347846;
+        border-radius: 2rem;
+        align-items: center;
+        text-align: center;
+
+        .icon-close{
+            position: absolute;
+            top: 1.5rem;
+            right: 2rem;
+            font-size: 1.4rem;
+            color: $white-bg;
+        }
+
+        .box{
+
+            img{
+                margin-top: 2.5rem;
+                height: 11rem;
+            }
+
+            h3{
+                margin-top: .5rem;
+                font-size: 2rem;
+                color: $white;
+            }
+
+            .image-qr{
+                width: 100%;
+                height: 100%;
+                img{
+                    margin-top: 1rem;
+                }
+            }
+
+            .content{
+                position: absolute;
+                top: 60%;
+                left: 5%;
+                right: 5%;
+                bottom: 3%;
+                background: $white;
+                border-radius: 1rem;
+                text-align: left;
+
+                .user-name,
+                .user-date,
+                .user-ID{
+                    padding: 1.5rem 1.5rem 0 1.5rem;
+                    .content-us{
+                        display: flex;
+                        
+
+                        i{
+                            font-size: 1.6rem;
+                        }
+
+                        span{
+                            text-transform: none;
+                            font-size: 1.4rem;
+                            padding-left: 1.5rem;
+                        }
+                    }
+                }
+                
+                p{
+                    font-size: 1.4rem;
+                    padding-left: 2.7rem;
+                    font-weight: bolder;
+                }
+            }
+        }
+    }
+}

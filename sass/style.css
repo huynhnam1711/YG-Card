@@ -1,0 +1,259 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap");
+* {
+  font-family: 'Poppins', sans-serif;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  text-transform: capitalize;
+  border: none;
+  outline: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transition: all .2s linear;
+  transition: all .2s linear;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 7rem;
+}
+
+html::-webkit-scrollbar {
+  width: 1rem;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: #2c2c54;
+}
+
+html::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+section {
+  padding: 3rem 4%;
+}
+
+body {
+  background: #fff;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header .info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header .info .logo img {
+  width: 7.5rem;
+  height: 8rem;
+  border-radius: 5rem;
+}
+
+.header .info .navbar {
+  text-align: center;
+}
+
+.header .info .navbar a {
+  font-size: 2rem;
+  font-weight: 900;
+  color: #333;
+  padding-left: 1rem;
+}
+
+.header .info .navbar p {
+  font-size: 1.2rem;
+}
+
+.header .icon div {
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.details-products .QR-code {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.details-products .QR-code i {
+  font-size: 2rem;
+  padding: 2rem 0;
+}
+
+.details-products .QR-code .content p {
+  text-align: center;
+  padding-left: 2rem;
+  font-size: 1.5rem;
+  text-transform: none;
+}
+
+.details-products .facebook {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.details-products .facebook i {
+  font-size: 2rem;
+  padding: 2rem 0;
+}
+
+.details-products .facebook p {
+  text-align: center;
+  padding-left: 2rem;
+  font-size: 1.5rem;
+  text-transform: none;
+  color: #222;
+}
+
+.details-products .messenger {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.details-products .messenger i {
+  font-size: 2rem;
+  padding: 2rem 0;
+}
+
+.details-products .messenger p {
+  text-align: center;
+  padding-left: 2rem;
+  font-size: 1.5rem;
+  text-transform: none;
+  color: #222;
+}
+
+.model {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  visibility: visible;
+  opacity: 1;
+}
+
+.model.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.model .box-container {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  right: 5%;
+  bottom: 5%;
+  width: 90%;
+  height: 90%;
+  background: #347846;
+  border-radius: 2rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.model .box-container .icon-close {
+  position: absolute;
+  top: 1.5rem;
+  right: 2rem;
+  font-size: 1.4rem;
+  color: #ccc;
+}
+
+.model .box-container .box img {
+  margin-top: 2.5rem;
+  height: 11rem;
+}
+
+.model .box-container .box h3 {
+  margin-top: .5rem;
+  font-size: 2rem;
+  color: #fff;
+}
+
+.model .box-container .box .image-qr {
+  width: 100%;
+  height: 100%;
+}
+
+.model .box-container .box .image-qr img {
+  margin-top: 1rem;
+}
+
+.model .box-container .box .content {
+  position: absolute;
+  top: 60%;
+  left: 5%;
+  right: 5%;
+  bottom: 3%;
+  background: #fff;
+  border-radius: 1rem;
+  text-align: left;
+}
+
+.model .box-container .box .content .user-name,
+.model .box-container .box .content .user-date,
+.model .box-container .box .content .user-ID {
+  padding: 1.5rem 1.5rem 0 1.5rem;
+}
+
+.model .box-container .box .content .user-name .content-us,
+.model .box-container .box .content .user-date .content-us,
+.model .box-container .box .content .user-ID .content-us {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.model .box-container .box .content .user-name .content-us i,
+.model .box-container .box .content .user-date .content-us i,
+.model .box-container .box .content .user-ID .content-us i {
+  font-size: 1.6rem;
+}
+
+.model .box-container .box .content .user-name .content-us span,
+.model .box-container .box .content .user-date .content-us span,
+.model .box-container .box .content .user-ID .content-us span {
+  text-transform: none;
+  font-size: 1.4rem;
+  padding-left: 1.5rem;
+}
+
+.model .box-container .box .content p {
+  font-size: 1.4rem;
+  padding-left: 2.7rem;
+  font-weight: bolder;
+}
+/*# sourceMappingURL=style.css.map */
