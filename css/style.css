@@ -66,15 +66,19 @@ body {
   cursor: pointer;
 }
 
-.details-products .QR-code {
+.details-products .btn {
+  display: block;
+  cursor: pointer;
+}
+.details-products .btn .QR-code {
   display: flex;
   align-items: center;
 }
-.details-products .QR-code i {
+.details-products .btn .QR-code i {
   font-size: 2rem;
   padding: 2rem 0;
 }
-.details-products .QR-code .content p {
+.details-products .btn .QR-code .content p {
   text-align: center;
   padding-left: 2rem;
   font-size: 1.5rem;
@@ -118,8 +122,8 @@ body {
   right: 0;
   bottom: 0;
   background: rgba(0, 0, 0, 0.3);
-  visibility: visible;
-  opacity: 1;
+  visibility: hidden;
+  opacity: 0;
 }
 .model.active {
   visibility: visible;
@@ -139,10 +143,11 @@ body {
   text-align: center;
 }
 .model .box-container .icon-close {
+  cursor: pointer;
   position: absolute;
   top: 1.5rem;
-  right: 2rem;
-  font-size: 1.4rem;
+  right: 1.8rem;
+  font-size: 2rem;
   color: #ccc;
 }
 .model .box-container .box img {
@@ -154,11 +159,9 @@ body {
   font-size: 2rem;
   color: #fff;
 }
-.model .box-container .box .image-qr {
-  width: 100%;
-  height: 100%;
-}
 .model .box-container .box .image-qr img {
+  max-height: 100%;
+  max-width: 100%;
   margin-top: 1rem;
 }
 .model .box-container .box .content {
