@@ -48,6 +48,7 @@ body {
   background: url(../img/bg-card1.jpg) repeat;
   background-position: center;
   background-position: top;
+  background-attachment: scroll;
 }
 
 body.active {
