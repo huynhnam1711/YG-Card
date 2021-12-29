@@ -21,7 +21,6 @@
   outline: none;
   box-sizing: border-box;
   transition: all 0.2s linear;
-  overflow: hidden;
 }
 
 html {
@@ -31,7 +30,7 @@ html {
   scroll-padding-top: 7rem;
 }
 html::-webkit-scrollbar {
-  width: 1rem;
+  width: 0.1rem;
 }
 html::-webkit-scrollbar-thumb {
   background: var(--ss);

@@ -23,8 +23,6 @@
     outline: none;
     box-sizing: border-box;
     transition: all .2s linear;
-    overflow: hidden;
-    // overflow-y: scroll;
 }
 
 html{
@@ -34,7 +32,7 @@ html{
     scroll-padding-top: 7rem;
 
     &::-webkit-scrollbar{
-        width: 1rem;
+        width: .1rem;
     }
 
     &::-webkit-scrollbar-thumb{
@@ -125,7 +123,6 @@ body.active{
 }
 
 .details-products{
-
 
     .btn{
         width: 100%;
