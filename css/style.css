@@ -6,7 +6,7 @@
   --light-bg:#eee;
   --white-bg:#ccc;
   --write:#111;
-  --modal:rgba(0, 0, 0, 0.3);
+  --modal:rgba(0, 0, 0, 0.8);
   --ss:#2c2c54;
   --ms:#3c16e6;
 }
@@ -88,6 +88,7 @@ body.active {
 .header .info .navbar p {
   font-size: 1.2rem;
   color: #fff;
+  text-transform: none;
 }
 .header .icon div {
   font-size: 2rem;
@@ -182,6 +183,7 @@ body.active {
 .model.active {
   visibility: visible;
   opacity: 1;
+  animation: fadeDown ease-in 0.3s;
 }
 .model .box-container {
   position: absolute;
@@ -252,6 +254,15 @@ body.active {
   font-size: 1.4rem;
   padding-left: 2.7rem;
   font-weight: bolder;
+}
+
+@keyframes fadeDown {
+  from {
+    transform: translateY(-10rem);
+  }
+  to {
+    transform: translateY();
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
