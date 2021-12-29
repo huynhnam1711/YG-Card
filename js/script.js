@@ -28,4 +28,14 @@ themeBtn.onclick = () => {
     }
 }
 
+const popBtns =document.querySelectorAll('.btn1')
+
+function error (){
+    alert('Chức năng chưa được thêm vào')
+}
+
+for(const popBtn of popBtns){
+    popBtn.addEventListener('click', error)
+}
+
 
