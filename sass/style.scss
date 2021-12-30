@@ -192,6 +192,111 @@ body.active{
     }
 }
 
+// acount
+.security{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--modal);
+    visibility: hidden;
+    opacity: 0;
+
+    &.active{
+        visibility: visible;
+        opacity: 1;
+        animation: fadeDown ease-in .3s;
+    }
+
+    .box-container{
+        position: absolute;
+        top: 20%;
+        left: 5%;
+        right: 5%;
+        bottom: 25%;   
+        background: #2c2c54;
+        border-radius: 2rem;
+        align-items: center;
+        text-align: center;
+
+        .icon-btn{
+            cursor: pointer;
+            position: absolute;
+            top: 1.5rem;
+            right: 1.8rem;
+            font-size: 2rem;
+            color: var(--white-bg);
+        }
+
+        h1{
+            text-transform: uppercase;
+            font-size: 2.5rem;
+            padding-top: 5rem;
+            color: var(--white);
+        }
+
+        .panel-body{
+            margin-top: 2rem;
+            padding: 0 1rem;
+
+            .form-group{
+                width: 100%;
+                padding: 1.3rem  0;
+                display: flex;
+                background: var(--white);
+                align-items: center;
+                border-radius: 5rem;
+
+                i{
+                    padding-left: 1.5rem;
+                    font-size: 1.7rem;
+                }
+
+                .form-control{
+                    width: 100%;
+                    margin: 0 1.5rem;
+                } 
+            }
+
+            .pding-top{
+                margin-top: 2rem;
+                width: 100%;
+                padding: 1.3rem 0;
+                display: flex;
+                background: var(--white);
+                align-items: center;
+                border-radius: 5rem;
+
+                i{
+                    padding-left: 1.5rem;
+                    font-size: 1.7rem;
+                }
+
+                .form-control{
+                    width: 100%;
+                    margin: 0 1.5rem;
+                } 
+            }
+        }
+
+        .submit{
+
+            .primary-key{
+                margin-top: 3rem;
+                padding: 1rem 2.5rem;
+                border-radius: 5rem;
+                cursor: pointer;
+
+                &:hover{
+                    letter-spacing: .2rem;
+                }
+            }
+        }
+    }
+}
+
+// model
 .model{
     position: fixed;
     top: 0;
@@ -222,7 +327,7 @@ body.active{
         text-align: center;
         
 
-        .icon-close{
+        .icon-btn{
             cursor: pointer;
             position: absolute;
             top: 1.5rem;

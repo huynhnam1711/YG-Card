@@ -8,10 +8,11 @@
 
      <!-- font awesome cdn link  -->
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
+     
      <link rel="stylesheet" href="css/style.css">
 
      <script src="js/script.js" defer></script>
+     <script src="js/login.js" defer></script>
 </head>
 <body>
     
@@ -27,7 +28,7 @@
                 <!-- name card -->
                 <a href="#">Huỳnh Nam</a>
                 <!-- description info -->
-                <p> Desgin Fontend </p>
+                <p> Desgin Front-end </p>
             </nav>
         </div>
 
@@ -112,7 +113,7 @@
             </a>
         </div>
 
-        <div class="box btn1">
+        <!-- <div class="box btn1">
             <a   class="phone"> 
                 <div class="icon">
                     <i class="far fa-envelope"></i>
@@ -146,17 +147,46 @@
                     <p>3</p>
                 </div>
             </a>
-        </div>
+        </div> -->
 
     
         
     </section>
 
+    <!-- model-account -->
+    <div class="security">
+
+        <div class="box-container">
+            <i class="fas fa-times icon-btn"></i>
+            <h1>login required</h1>
+
+           <div class="panel-body">
+                <form id="form-login" action="">
+                    <div class="form-group">
+                       <label for="username"><i class="far fa-user-circle"></i></label>
+                       <input type="text" class="form-control" id="username" placeholder="Tên đăng nhập...">
+                    </div>
+        
+                    <div class="pding-top">
+                        <label for="password"><i class="fas fa-unlock-alt"></i></label>
+                        <input type="password" class="form-control" id="password" placeholder="Nhập khẩu...">
+                    </div>
+
+                    <div class="submit">
+                        <button type="submit" class="primary-key"; return false;> Submit</button>
+                    </div>
+                </form>
+           </div>
+        </div>
+    </div>
+    <!-- model-account end -->
+
+    
 
     <!-- details -->
     <div class="model">
         <div class="box-container">
-            <i class="fas fa-times icon-close"></i>
+            <i class="fas fa-times icon-btn"></i>
             <div class="box">
                 <img src="img/bg-vc.png" alt="">
 
@@ -204,6 +234,6 @@
             </div>
         </div>
     </div>
-    
+    <script src="https://code.jquery.com/jquery-git.js"></script>
 </body>
 </html>
